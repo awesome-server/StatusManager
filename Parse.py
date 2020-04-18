@@ -22,7 +22,9 @@ def publish_status_page(containers, website_src_path):
     )
 
     status_table = ["Container", "Status"]
-    for container in containers:
+    for container in sorted(
+        containers, key=lambda c: c.attrs["Config"]["Image"].split("/")[0]
+    ):
         status_table.extend(
             [
                 container.attrs["Config"]["Image"].split("/")[0],
