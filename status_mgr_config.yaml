@@ -1,2 +1,5 @@
+# All time and time diffs are in minutes.
+
 poll_interval: 5
+mandatory_rebuild_time_diff: 1
 website_src_path: "/home/ujjwal/awesome-server/website"
